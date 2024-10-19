@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="heading">
+      <h1>The Dice Game </h1>
+    </div>
+    <div class="middle">
+        <div class="img1">
+          <img class="dice_img1" src="./dice6.png" />
+          <p id="name_tag1">Player 1</p>
+        </div>
+        <div class="middle names">  
+            <p id="player1" class="player1">Player 1</p>
+            <p id="vs">VS</p>
+            <p id="player2" class="player2">Player 2</p>
+        </div>
+        <div class="img2">
+          <img class="dice_img2" src="./dice6.png" />
+          <p id="name_tag2">Player 2</p>
+        </div>
+    </div>
+    <div class="features">
+      <button id="btn">Play</button>
+    </div>
+    <div id="Info">
+        <button id="infoBtn">Show Info</button>
+        <p id="info">To play with new names, Please refresh the page , Tap again to close</p>
+
+    <script>
+            document.getElementById("info").style.display = "none"; 
+            document.getElementById("infoBtn").onclick = function() {
+              var infoDiv = document.getElementById("info");
+              if (infoDiv.style.display === "none") {
+                  infoDiv.style.display = "block"; // Show the info
+             } else {
+                 infoDiv.style.display = "none"; // Hide the info
+             }
+          };
+    </script>
+    </div>
+    <footer id="Winner"></footer>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
